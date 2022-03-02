@@ -76,7 +76,7 @@
             padding-top: 30px;
         }
 
-        #closebtn {
+        #close {
             color: #fff;
             font-size: xx-large;
             padding-right: 50px;
@@ -155,7 +155,7 @@
             <button type="button" class="btn btn-dark btn-lg" onclick="showPDF('transcript')">Transcript</button>
         </div>
         <div class="doc">
-            <button type="button" class="display" id="closebtn" class="btn btn-dark">Close &times;</button>
+            <span id="close" display><button type="button" class="btn btn-dark">Close &times;</button> </span>
             <div id="pdf"></div>
         </div>
     </div>
@@ -170,7 +170,7 @@
     });
 
     function showPDF(filetype) {
-        var closeDoc = document.getElementById("closebtn");
+        var closeDoc = document.getElementById("close");
         closeDoc.style.display = 'block';
 
         var pdf = document.getElementById('pdf')
