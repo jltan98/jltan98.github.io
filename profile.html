@@ -162,11 +162,11 @@
 
 </body>
 <script>
-    var closeBtn = document.getElementById("closebtn");
+    var closeDoc = document.getElementById("close");
 
-    closeBtn.addEventListener("click", function () {
+    closeDoc.addEventListener("click", function () {
         document.getElementById('pdf').innerHTML = ""
-        this.closeBtn.style.display = 'none';
+        this.closeDoc.style.display = 'none';
     });
 
     function showPDF(filetype) {
