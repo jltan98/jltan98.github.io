@@ -85,7 +85,7 @@
         }
         
         .lead {
-            font-size: 12px;
+            font-size: 15px;
         }
     </style>
 </head>
@@ -155,18 +155,18 @@
             <button type="button" class="btn btn-dark btn-lg" onclick="showPDF('transcript')">Transcript</button>
         </div>
         <div class="doc">
-            <span id="close" display><button type="button" class="btn btn-dark">Close &times;</button> </span>
+            <span id="close" display><button type="button" id="closebtn" class="btn btn-dark">Close &times;</button> </span>
             <div id="pdf"></div>
         </div>
     </div>
 
 </body>
 <script>
-    var closeDoc = document.getElementById("close");
+    var closeBtn = document.getElementById("closebtn");
 
-    closeDoc.addEventListener("click", function () {
+    closeBtn.addEventListener("click", function () {
         document.getElementById('pdf').innerHTML = ""
-        this.closeDoc.style.display = 'none';
+        this.closeBtn.style.display = 'none';
     });
 
     function showPDF(filetype) {
