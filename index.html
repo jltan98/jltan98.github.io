@@ -1,106 +1,386 @@
 <!DOCTYPE html>
-<html>
 
 <head>
-    <title>Welcome</title>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <title>Welcome</title>
+    <meta name="description" content="">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-    <!-- Latest compiled and minified JavaScript -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- 
+    	Volton Template
+    	http://www.templatemo.com/tm-441-volton
+        -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-        crossorigin="anonymous"></script>
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-    <!--Icon Library-->
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"
-        type='text/css'>
-    <style>
-        body {
-            background-color: black;
-        }
-
-        .navbar-dark .navbar-nav .nav-link {
-            color: #fff;
-            font-size: large;
-            padding-left: 50px;
-            padding-right: 50px;
-        }
-
-        #me {
-            border-radius: 50%;
-            padding-left: 50px;
-            padding-right: 50px;
-        }
-
-        #hello {
-            padding: 0;
-            display: block;
-            margin: 0 auto;
-            max-height: 100%;
-            max-width: 100%;
-        }
-
-        body {
-            background-image: url("img/hello.gif");
-            background-repeat: no-repeat;
-            background-size: 80%;
-            background-position: center top;
-        }
-        
-        .active {
-            background-color: rgb(236, 236, 230);
-            border-radius: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="js/doc.js"></script>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg py-3 navbar-dark bg-dark">
+    <div class="responsive-header visible-xs visible-sm">
         <div class="container">
-            <a class="navbar-brand" href="#"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <img id="me" src="img/jl.png" draggable="false" height="50" />
-                    <li class="nav-item">
-                        <a class="nav-link mx-2 active" style="color:black" href="index.html"><i class="fa fa-home"></i> Home </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2" href="profile.html"> <i class="fa fa-user"></i> About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2" href="project.html"><i class="fa fa-code"></i> Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2" href="contact.html"><i class="fa fa-address-card"></i> Contact</a>
-                    </li>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="top-section">
+                        <div class="profile-image">
+                            <img src="img/profile.png" alt="Volton">
+                        </div>
+                        <div class="profile-content">
+                            <h3 class="profile-title">Jia Leng</h3>
+                            <p class="profile-description">Business Analyst</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
+            <div class="main-navigation responsive-menu">
+                <ul class="navigation">
+                    <li><a href="#top"><i class="fa fa-home"></i>Home</a></li>
+                    <li><a href="#about"><i class="fa fa-user"></i>About Me</a></li>
+                    <li><a href="#projects"><i class="fa fa-code"></i>Projects</a></li>
+                    <li><a href="#documents"><i class="fa fa-file-text"></i>Documents</a></li>
+                    <li><a href="#photos"><i class="fa fa-picture-o"></i>Photos</a></li>
                 </ul>
             </div>
         </div>
-    </nav>
-    <!-- Navbar -->
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar-menu hidden-xs hidden-sm">
+        <div class="top-section">
+            <div class="profile-image">
+                <img src="img/profile.png" alt="Volton">
+            </div>
+            <h3 class="profile-title">Jia Leng</h3>
+            <p class="profile-description">Business Analyst</p>
+        </div> <!-- top-section -->
+        <div class="social-icons">
+            <ul>
+                <li><a href="https://t.me/cheryljialin"><i class="fa fa-paper-plane"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/jialengtan/"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="jialeng.tan.2019@scis.smu.edu.sg"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+        </div> <!-- .social-icons -->
+        <div class="main-navigation">
+            <ul class="navigation">
+                <li><a href="#top"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="#about"><i class="fa fa-user"></i>About Me</a></li>
+                <li><a href="#projects"><i class="fa fa-code"></i>Projects</a></li>
+                <li><a href="#documents"><i class="fa fa-file-text"></i>Documents</a></li>
+                <li><a href="#photos"><i class="fa fa-picture-o"></i>Photos</a></li>
+            </ul>
+        </div> <!-- .main-navigation -->
+    </div> <!-- .sidebar-menu -->
+
+
+    <div class="banner-bg" id="top">
+        <div class="banner-overlay"></div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <div class="fluid-container">
+
+            <div class="content-wrapper">
+
+                <!-- ABOUT -->
+                <div class="page-section" id="about">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">About Me</h4>
+                            <!-- <div class="about-image">
+                                <img src="img/8.jpg" alt="about me">
+                            </div> -->
+                            <p class="pFont">My name is Jia Leng, also known as Cheryl. You may address me by either
+                                name.</p>
+                            <p class="pFont">I am a penultimate student in Singapore Management University studying
+                                Information Systems, Business Analytics major.</p>
+                            <br>
+                            <p class="pFont">In the analytical field, I have done projects related to data cleaning and
+                                pre-processing, exploratory data analysis, data management, web-scraping (using API
+                                calls and python libraries), sentiment analysis, topic modelling, network analysis, use
+                                of machine learning models such as Random Forest, Decision Trees, XGBoost etc to train
+                                and build classification models, creating dashboard for analysis on Tableau and TIBCO
+                                Spotfire, as well as stock analysis (e.g. volatility, returns, risk adjusted return,
+                                moving average). Python is used to conduct the above mentioned analysis.</p>
+                            <br>
+                            <p class="pFont">In the software development aspect, I have done projects related to web
+                                application
+                                development using HTML, CSS, Bootstrap, Javascript, Vue.JS, Python Flask, Docker and
+                                MySQL, create
+                                high-fi prototype using Axure RP software, did user acceptance testing for the
+                                application and CI
+                                pipeline using jenkins (connected to GitHub). For deployment/hosting of web app, I have
+                                done it using
+                                AWS EC2 and RDS.</p>
+                            <br>
+                            <p class="pFont">I am still new to the working industry for Information Technology, hence
+                                seeking internship
+                                opportunities to improve on my skills in analytics and software development.</p>
+
+                            <hr>
+                        </div>
+                    </div> <!-- #about -->
+                </div>
+
+                <!-- PROJECTS -->
+                <div class="page-section" id="projects">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 class="widget-title">Previous Works</h4>
+                            <div class="container">
+                                <div class="card w-50">
+                                    <div class="card-header bg-dark text-white">
+                                        Analytics Projects
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">ML Classification Models | Early stroke prediction</h5>
+                                        <p class="card-text">Accurately predict the occurrence of stroke using
+                                            Classification Models based on
+                                            the health related conditions provided.</p>
+                                        <p class="card-text">ML Models used: XGBoost, Decision Tree Classifier, Gradient
+                                            Boosting, Random Forest
+                                            Classifier, Gaussian Naive Bayes, Artificial Neural Network, Logistic
+                                            Regression </p>
+                                        <br>
+                                        <a href="https://drive.google.com/drive/folders/1CziHGrsYPde5T1rLKcOhqHX_GWAXzLjJ?usp=sharing"
+                                            class="btn btn-primary">Click to view the project</a>
+                                    </div>
+                                    <hr>
+                                    <div class="card-body">
+                                        <h5 class="card-title">ASAP & Co Social Media Marketing</h5>
+                                        <p class="card-text">To understand the probable causes for the low engagement
+                                            rate of ASAP & Co’s social
+                                            media pages and offer recommendations to increase the engagement rate. In
+                                            addition, to help them
+                                            target more affluent customers and have a direction to work towards, based
+                                            on the insights,
+                                            recommendations are given on how to shift the brand imaging of ASAP & Co.
+                                        </p>
+                                        <p class="card-text">Tech Stack: Python - Selenium, insta-scrape, LDA Model
+                                            (gensim), Vader Sentiment
+                                            Analyser </p>
+                                        <br>
+                                        <a href="https://drive.google.com/drive/folders/1nDRJOHPCev5oSeGqGqxMjRa78aaw58Hg?usp=sharing"
+                                            class="btn btn-primary">Click to view the project</a>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="card w-50">
+                                    <div class="card-header bg-dark text-white">
+                                        Software Development Projects
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">ESDVentures | Investment Recommendation</h5>
+                                        <p class="card-text">Web application for investment counsellors to make use of
+                                            the financial news
+                                            and twitter
+                                            sentiment data to come up with investment recommendations for the client</p>
+                                        <p class="card-text">Tech Stack: APIs from Twitter, Xignite | HTML, CSS, Vue.js
+                                            | Python Flask | SQL |
+                                            Docker </p>
+                                        <br>
+                                        <a href="https://github.com/jltan98/ESD" class="btn btn-primary">Click to view
+                                            the code</a>
+                                    </div>
+                                    <hr>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Software Project Management | One Stop Learning
+                                            Management System</h5>
+                                        <p class="card-text">To address the issue of lack of training and proficiency of
+                                            the engineers, the
+                                            management has
+                                            decided to build a software solution for a Learning System for the field
+                                            engineers.</p>
+                                        <p class="card-text">Tech Stack: HTML, CSS, Vue.js | Python Flask | SQL | AWS
+                                            EC2, RDS</p>
+                                        <br>
+                                        <a href="https://github.com/jltan98/SPM" class="btn btn-primary">Click to view
+                                            the code</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- #projects -->
+                </div>
+                <hr>
+                <!-- Documents -->
+                <div class="page-section" id="documents">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">Documents</h4>
+                            <div class="text-center">
+                                <button type="button" class="btn btn-dark btn-lg"
+                                    onclick="showPDF('resume')">Resume</button>
+                                <button type="button" class="btn btn-dark btn-lg"
+                                    onclick="showPDF('transcript')">Transcript</button>
+                            </div>
+                            <div class="doc">
+                                <span id="close" onclick="closeDoc()" display><button type="button"
+                                        class="btn btn-dark">Close &times;</button> </span>
+                                <div id="pdf"></div>
+                            </div>
+                        </div>
+                    </div> <!-- #documents -->
+                </div>
+
+                <hr>
+                <!-- Photos -->
+                <div class="page-section" id="photos">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">Photos of what I have done</h4>
+                            <div class="row projects-holder">
+                                <div class="col-md-4 col-lg-6">
+                                    <div class="project-item">
+                                        <img src="img/schroders.jpg" alt="">
+                                        <div class="project-hover">
+                                            <div class="inside">
+                                                <h5>Schroders</h5>
+                                                <p>Working in the reconciliation department during gap year</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-6">
+                                    <div class="project-item">
+                                        <img src="img/ocbcintern.jpg" alt="">
+                                        <div class="project-hover">
+                                            <div class="inside">
+                                                <h5>OCBC Bank</h5>
+                                                <p>Experience 6-weeks internship in digital marketing department</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-6">
+                                    <div class="project-item">
+                                        <img src="img/yes2016.jpg" alt="">
+                                        <div class="project-hover">
+                                            <div class="inside">
+                                                <h5>Youth Entrepreneurship Symposium 2016 | NTUC nEbO</h5>
+                                                <p>Organise 3-days symposium for youth interested in Entrepreneurship as
+                                                    the
+                                                    Programmes Director</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-6">
+                                    <div class="project-item">
+                                        <img src="img/sre-ymac.jpg" alt="">
+                                        <div class="project-hover">
+                                            <div class="inside">
+                                                <h5>S Rajaratnam Endowment-Youth Model ASEAN Conference 2016</h5>
+                                                <p>Act as facilitator and backstage crew for the ASEAN students coming
+                                                    to
+                                                    Singapore Polytechnic for the event</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-6">
+                                    <div class="project-item">
+                                        <img src="img/futurechina.jpg" alt="">
+                                        <div class="project-hover">
+                                            <div class="inside">
+                                                <h5>FutureChina Global Forum 2016</h5>
+                                                <p>Act as Liaison Officer to perform simple support and secretarial
+                                                    duties for distinguished speakers, as well as act as Forum
+                                                    ambassadors</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-6">
+                                    <div class="project-item">
+                                        <img src="img/ylp.jpg" alt="">
+                                        <div class="project-hover">
+                                            <div class="inside">
+                                                <h5>Common Purpose | SG100 Youth Leadership Programme 2016</h5>
+                                                <p>4-day experiential leadership programme in Singapore on "How should
+                                                    young
+                                                    leaders of Singapore kick-start their 50-years legacy"</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-6">
+                                    <div class="project-item">
+                                        <img src="img/danceperf.jpg" alt="">
+                                        <div class="project-hover">
+                                            <div class="inside">
+                                                <h5>Republic Polytechnic Dance Festival: Momentum 2017</h5>
+                                                <p>Latin Dance Production Performance in collaboration with other
+                                                    polytechnic dancesport clubs</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-6">
+                                    <div class="project-item">
+                                        <img src="img/dansfest.jpg" alt="">
+                                        <div class="project-hover">
+                                            <div class="inside">
+                                                <h5>Esplanade dans festival 2016</h5>
+                                                <p>Outdoor Latin Dance Performance</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-6">
+                                    <div class="project-item">
+                                        <img src="img/xmas.jpg" alt="">
+                                        <div class="project-hover">
+                                            <div class="inside">
+                                                <h5>Christmas Jamboree | NTUC nEbO</h5>
+                                                <p>Carolling during Christmas at migrant workers dormitory</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-6">
+                                    <div class="project-item">
+                                        <img src="img/wlp.jpg" alt="">
+                                        <div class="project-hover">
+                                            <div class="inside">
+                                                <h5>World Learner Student Exchange Programme 2017</h5>
+                                                <p>Act as facilitator to host young students from Sze Chuan in Singapore to help them better understand our history, culture and our way of life</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- .projects-holder -->
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+
+                <div class="row" id="footer">
+                    <div class="col-md-12 text-center">
+                        <p class="copyright-text">Copyright &copy; 2022 Jia Leng Tan</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="js/min/plugins.min.js"></script>
+    <script src="js/min/main.min.js"></script>
+
 </body>
 
 </html>
